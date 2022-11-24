@@ -335,7 +335,7 @@ navsat_transform:
     use_sim_time: true
     frequency: 20.0
     delay: 20.0
-    magnetic_declination_radians: 0.093084220955  # For lat/long of Atlanta, Georgia
+    magnetic_declination_radians: 0.042236967898  # For lat/long of Starkville, MS
     yaw_offset: 0.0  # if IMU reads 0 when facing magnetic north instead of east then set parameter to pi/2
     zero_altitude: true
     broadcast_utm_transform: true
