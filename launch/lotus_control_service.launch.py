@@ -180,6 +180,10 @@ def generate_launch_description():
                   '-Y', spawn_yaw_val],
        output='screen')
 
+  publish_map_to_odom_cmd = Node(package = "tf2_ros", 
+                       executable = "static_transform_publisher",
+                       arguments = ["0", "0", "0", "0", "0", "0", "map", "odom"])
+
   # Start the navsat transform node which converts GPS data into the world coordinate frame
   start_navsat_transform_cmd = Node(
     package='robot_localization',
@@ -277,5 +281,6 @@ def generate_launch_description():
   ld.add_action(start_robot_state_publisher_cmd)
   ld.add_action(start_rviz_cmd)
   ld.add_action(start_ros2_navigation_cmd)
+  # ld.add_action(publish_map_to_odom_cmd)
 
   return ld
