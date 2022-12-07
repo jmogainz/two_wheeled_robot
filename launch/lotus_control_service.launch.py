@@ -216,10 +216,6 @@ def generate_launch_description():
     remappings=[('odometry/filtered', 'odometry/local'),
                 ('/set_pose', '/initialpose')])
 
-  publish_map_to_odom_cmd = Node(package = "tf2_ros", 
-                       executable = "static_transform_publisher",
-                       arguments = ["0", "0", "0", "0", "0", "0", "map", "odom"])
-
   # Subscribe to the joint states of the robot, and publish the 3D pose of each link.
   start_robot_state_publisher_cmd = Node(
     condition=IfCondition(use_robot_state_pub),
