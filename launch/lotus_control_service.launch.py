@@ -22,7 +22,7 @@ def generate_launch_description():
   default_launch_dir = 'launch'
   gazebo_models_path = 'models'
   map_file_path = 'maps/lotus_control_service_test_world/blank_map.yaml'
-  nav2_params_path = 'params/nav2_params_lotus_control_service.yaml'
+  nav2_params_path = 'params/regulated_velo.yaml'
   robot_localization_file_path = 'config/ekf_with_gps.yaml'
   rviz_config_file_path = 'rviz/cafe_world/nav2_config.rviz'
   sdf_model_path = 'models/two_wheeled_robot_description/lotus_model.sdf'
